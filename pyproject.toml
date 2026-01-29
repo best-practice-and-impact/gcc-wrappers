@@ -1,0 +1,17 @@
+[project]
+name = "gcc-wrappers"
+version = "0.1.1"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "cookiecutter>=2.6.0",
+    "python-dotenv>=1.2.1",
+]
+
+[tool.setuptools.packages.find]
+include = ["gcc_wrappers*"]
+
+
+[project.scripts]
+gcc-lite = "gcc_wrappers.run_from_zip:run_lite_from_zip"
