@@ -14,9 +14,15 @@ Publishing this wrapper on PyPI should allow for the templates to be installed u
 This section is the plan of how the package should work and is subject to change. 
 
 ```mermaid
-graph TD;
-    A-->B;
-    A-->C;
-    B-->D;
-    C-->D;
+flowchart TD;
+    A[GovCookieCutter]-->B[ggc zipped folder*];
+    C[GovCookieCutter-lite]-->D[gcc-lite zipped folder**];
+    B-->E[move into gcc wrapper package directory];
+    D-->E
+    E-->F[Upload package to PyPI]
+    ;
 ```
+*gcc zipped folder should contain; 
+        `{{ cookiecutter.project_name.lower().replace(' ', '_').replace('-', '_').replace('.','_').strip() }}/, hooks/, cookiecutter.json`
+**gcc-lite zippped folder should contain; 
+    `{{ cookiecutter.repo_name }}/ , hooks/, cookiecutter.json`
