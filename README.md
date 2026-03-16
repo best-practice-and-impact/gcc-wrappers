@@ -13,11 +13,10 @@ Publishing this wrapper on PyPI should allow for the templates to be installed u
 
 This section is the plan of how the package should work and is subject to change. 
 
-graph TD
-    A[Enter Chart Definition] --> B(Preview)
-    B --> C{decide}
-    C --> D[Keep]
-    C --> E[Edit Definition]
-    E --> B
-    D --> F[Save Image and Code]
-    F --> B
+```mermaid
+graph TD;
+    A-->B;
+    A-->C;
+    B-->D;
+    C-->D;
+```
